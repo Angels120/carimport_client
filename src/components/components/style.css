@@ -1,0 +1,57 @@
+.feature-drawer{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: rgb(102, 102, 102);
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+}
+
+.drawer-right-part{
+    position: fixed;
+    top: 0;
+    right: -400px; /* Initially hidden off-screen */
+    width: 400px;
+    height: 100%;
+    background-color: #f1f1f1;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.show {
+    right: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .overlay-open {
+    opacity: 1;
+    visibility: visible;
+    }
+
+.overlay-close {
+    opacity: 0;
+    visibility: hidden;
+    }
+
+  
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+  }
